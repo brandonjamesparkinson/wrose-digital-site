@@ -5,28 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrose Digital</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0a0a23;
-      --secondary: #6b9c8f; /* Chartwell green-like */
+      --secondary: #6b9c8f;
       --mint: #c4e1d2;
       --eggshell: #f0f0e9;
     }
     body {
       background-color: var(--eggshell);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Quicksand', sans-serif;
       color: #333;
     }
     header {
       background: linear-gradient(to right, var(--primary), var(--secondary));
       color: white;
-      padding: 5rem 1rem 3rem;
+      padding: 4rem 1rem 2.5rem;
       text-align: center;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
     }
     header h1 {
       font-size: 3rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
     }
     header p {
       font-size: 1.25rem;
@@ -45,6 +49,7 @@
       background-color: white;
       color: var(--primary);
       font-weight: 500;
+      border-radius: 0.5rem !important;
     }
     .accordion-button:not(.collapsed) {
       background-color: var(--secondary);
@@ -53,6 +58,7 @@
     .card {
       border: none;
       background-color: white;
+      border-radius: 1rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
     }
@@ -69,13 +75,19 @@
       padding: 2rem 1rem;
       text-align: center;
       margin-top: 3rem;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
     }
     .btn-primary {
       background-color: var(--secondary);
       border: none;
+      border-radius: 0.5rem;
     }
     .btn-primary:hover {
       background-color: var(--primary);
+    }
+    .form-control {
+      border-radius: 0.5rem;
     }
     .divider {
       border-top: 2px solid var(--mint);
@@ -88,60 +100,60 @@
   <!-- Header -->
   <header>
     <h1>Wrose Digital</h1>
-    <p>Crafting scalable .NET solutions and optimizing SQL for modern UK businesses.</p>
+    <p>Innovative software solutions that reduce costs, modernize systems, and drive long-term business efficiency.</p>
   </header>
 
   <!-- Services -->
   <section class="section">
     <div class="container">
       <h2>Our Services</h2>
-      <p class="text-center mb-5">We specialize in building dependable software for enterprise clients, tackling the challenges of legacy systems, data integration, and modernization through scalable .NET technologies.</p>
+      <p class="text-center mb-5">We deliver smart, cost-saving development solutions for UK enterprises, focusing on modernizing outdated tech and building reliable platforms that last.</p>
       <div class="accordion accordion-flush" id="servicesAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
               Custom .NET application development
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#servicesAccordion">
+          <div id="collapseOne" class="accordion-collapse collapse">
             <div class="accordion-body">
-              We build scalable .NET applications tailored to your business processes, using modern design patterns and best practices. Our solutions support integration with complex legacy platforms and provide modern user experiences.
+              Modern web and desktop apps built using .NET technologies. We've helped companies cut third-party software license costs by developing tailored in-house solutions.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
               SQL database design & optimization
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#servicesAccordion">
+          <div id="collapseTwo" class="accordion-collapse collapse">
             <div class="accordion-body">
-              We design efficient, normalized databases and optimize SQL queries for performance and scalability. This includes reworking legacy schemas and tuning enterprise-level data pipelines.
+              Performance-tuned databases that scale. We reduced query execution time by 80% for a healthcare provider by optimizing indexes and stored procedures.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
               XML and data integration for enterprise systems
             </button>
           </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#servicesAccordion">
+          <div id="collapseThree" class="accordion-collapse collapse">
             <div class="accordion-body">
-              We help businesses integrate and validate structured data with XML-based pipelines, third-party APIs, and industry-standard schemas, ensuring compliance and interoperability.
+              Seamless integration with NHS datasets, finance APIs, and procurement feeds. We enabled automated XML validation workflows, saving teams hours of manual checks weekly.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
               Technical consulting and code audits
             </button>
           </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#servicesAccordion">
+          <div id="collapseFour" class="accordion-collapse collapse">
             <div class="accordion-body">
-              We provide technical guidance, code reviews, and architectural advice to help teams improve software quality, reduce risk, and future-proof existing codebases.
+              Expert guidance for software teams. Our audits have uncovered costly performance issues, reduced technical debt, and helped align product roadmaps with clean architecture.
             </div>
           </div>
         </div>
@@ -155,29 +167,29 @@
   <section class="section bg-white">
     <div class="container">
       <h2>Example Projects</h2>
-      <p class="text-center mb-5">Real-world solutions we’ve delivered for enterprise clients across sectors like healthcare, finance, and logistics.</p>
+      <p class="text-center mb-5">Real solutions that delivered tangible business impact.</p>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Project Tracker App</h5>
-              <p class="card-text">A cross-platform .NET MAUI app for tracking project tasks, deadlines, and team collaboration.</p>
+              <h5 class="card-title">Cost-Saving Project Tracker</h5>
+              <p class="card-text">We developed a .NET MAUI project tracker that replaced a costly subscription tool, saving £6,000 annually for an operations firm.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Healthcare Data Sync</h5>
-              <p class="card-text">Custom-built data synchronization service using C#, SQL, and XML for NHS partner systems.</p>
+              <h5 class="card-title">Healthcare Sync Platform</h5>
+              <p class="card-text">A robust sync engine built with SQL and XML that improved data integrity across NHS data feeds and cut downtime by 50%.</p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card h-100">
             <div class="card-body">
-              <h5 class="card-title">Financial Report Generator</h5>
-              <p class="card-text">Automated financial reporting tool with SQL query optimization and Excel export features.</p>
+              <h5 class="card-title">Financial Reporting Tool</h5>
+              <p class="card-text">Automated reporting system with templated exports. Reduced month-end reporting time from 2 days to 3 hours.</p>
             </div>
           </div>
         </div>
@@ -190,7 +202,7 @@
     <div class="container">
       <h2>About</h2>
       <p class="fs-5">
-        With over 7 years of experience in C#, .NET, SQL, and SSMS, Wrose Digital delivers expert consulting and high-performance software development services. We specialize in modernizing legacy systems, integrating enterprise data workflows, and bringing clarity and stability to complex technical environments.
+        Wrose Digital has 7+ years of hands-on experience delivering enterprise-grade software with C#, .NET, and SQL Server. We’ve helped organizations eliminate inefficiencies, retire legacy tools, and future-proof their systems — all while reducing spend and enhancing operational control.
       </p>
     </div>
   </section>
