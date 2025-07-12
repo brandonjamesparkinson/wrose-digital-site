@@ -8,11 +8,12 @@
   <style>
     :root {
       --primary: #0a0a23;
-      --secondary: #0056b3;
-      --background: #f9f9f9;
+      --secondary: #6b9c8f; /* Chartwell green-like */
+      --mint: #c4e1d2;
+      --eggshell: #f0f0e9;
     }
     body {
-      background-color: var(--background);
+      background-color: var(--eggshell);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #333;
     }
@@ -51,6 +52,7 @@
     }
     .card {
       border: none;
+      background-color: white;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease;
     }
@@ -75,6 +77,11 @@
     .btn-primary:hover {
       background-color: var(--primary);
     }
+    .divider {
+      border-top: 2px solid var(--mint);
+      margin: 4rem auto;
+      max-width: 200px;
+    }
   </style>
 </head>
 <body>
@@ -88,6 +95,7 @@
   <section class="section">
     <div class="container">
       <h2>Our Services</h2>
+      <p class="text-center mb-5">We specialize in building dependable software for enterprise clients, tackling the challenges of legacy systems, data integration, and modernization through scalable .NET technologies.</p>
       <div class="accordion accordion-flush" id="servicesAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -97,7 +105,7 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#servicesAccordion">
             <div class="accordion-body">
-              We build scalable .NET applications tailored to your business processes, using modern design patterns and best practices.
+              We build scalable .NET applications tailored to your business processes, using modern design patterns and best practices. Our solutions support integration with complex legacy platforms and provide modern user experiences.
             </div>
           </div>
         </div>
@@ -109,7 +117,7 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#servicesAccordion">
             <div class="accordion-body">
-              We design efficient, normalized databases and optimize SQL queries for performance and scalability.
+              We design efficient, normalized databases and optimize SQL queries for performance and scalability. This includes reworking legacy schemas and tuning enterprise-level data pipelines.
             </div>
           </div>
         </div>
@@ -121,7 +129,7 @@
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#servicesAccordion">
             <div class="accordion-body">
-              We help businesses integrate and validate structured data with XML-based pipelines and third-party APIs.
+              We help businesses integrate and validate structured data with XML-based pipelines, third-party APIs, and industry-standard schemas, ensuring compliance and interoperability.
             </div>
           </div>
         </div>
@@ -133,7 +141,7 @@
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#servicesAccordion">
             <div class="accordion-body">
-              We provide technical guidance, code reviews, and architectural advice to help teams improve their software quality.
+              We provide technical guidance, code reviews, and architectural advice to help teams improve software quality, reduce risk, and future-proof existing codebases.
             </div>
           </div>
         </div>
@@ -141,10 +149,13 @@
     </div>
   </section>
 
+  <div class="divider"></div>
+
   <!-- Projects -->
   <section class="section bg-white">
     <div class="container">
       <h2>Example Projects</h2>
+      <p class="text-center mb-5">Real-world solutions we’ve delivered for enterprise clients across sectors like healthcare, finance, and logistics.</p>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card h-100">
@@ -179,7 +190,7 @@
     <div class="container">
       <h2>About</h2>
       <p class="fs-5">
-        With over 7 years of experience in C#, .NET, SQL, and SSMS, Wrose Digital delivers expert consulting and high-performance software development services. Whether you're a startup or an established enterprise, we bring precision and scalability to your systems.
+        With over 7 years of experience in C#, .NET, SQL, and SSMS, Wrose Digital delivers expert consulting and high-performance software development services. We specialize in modernizing legacy systems, integrating enterprise data workflows, and bringing clarity and stability to complex technical environments.
       </p>
     </div>
   </section>
