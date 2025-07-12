@@ -7,66 +7,95 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     :root {
-      --primary: #004080;
-      --secondary: #007acc;
-      --light-bg: #f0f4f8;
+      --primary: #0a0a23;
+      --secondary: #0056b3;
+      --background: #f9f9f9;
     }
     body {
-      background-color: var(--light-bg);
+      background-color: var(--background);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #333;
     }
     header {
-      background-color: var(--primary);
+      background: linear-gradient(to right, var(--primary), var(--secondary));
       color: white;
+      padding: 5rem 1rem 3rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.25rem;
+      opacity: 0.9;
     }
     .section {
       padding: 4rem 1rem;
     }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 500;
+    }
     .accordion-button {
+      background-color: white;
+      color: var(--primary);
+      font-weight: 500;
+    }
+    .accordion-button:not(.collapsed) {
       background-color: var(--secondary);
       color: white;
     }
-    .accordion-button:not(.collapsed) {
-      background-color: var(--primary);
-      color: white;
+    .card {
+      border: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card-title {
+      font-size: 1.25rem;
       color: var(--primary);
     }
     footer {
       background-color: var(--primary);
       color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
     }
     .btn-primary {
       background-color: var(--secondary);
-      border-color: var(--secondary);
+      border: none;
     }
     .btn-primary:hover {
       background-color: var(--primary);
-      border-color: var(--primary);
     }
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header class="py-4 mb-4">
-    <div class="container text-center">
-      <h1 class="display-4">Wrose Digital</h1>
-      <p class="lead">Crafting scalable .NET solutions and optimizing SQL for modern UK businesses.</p>
-    </div>
+  <header>
+    <h1>Wrose Digital</h1>
+    <p>Crafting scalable .NET solutions and optimizing SQL for modern UK businesses.</p>
   </header>
 
   <!-- Services -->
   <section class="section">
     <div class="container">
-      <h2 class="h3 mb-4">Our Services</h2>
-      <div class="accordion" id="servicesAccordion">
+      <h2>Our Services</h2>
+      <div class="accordion accordion-flush" id="servicesAccordion">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               Custom .NET application development
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#servicesAccordion">
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#servicesAccordion">
             <div class="accordion-body">
               We build scalable .NET applications tailored to your business processes, using modern design patterns and best practices.
             </div>
@@ -115,10 +144,10 @@
   <!-- Projects -->
   <section class="section bg-white">
     <div class="container">
-      <h2 class="h3 mb-4">Example Projects</h2>
+      <h2>Example Projects</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card h-100 border-primary">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Project Tracker App</h5>
               <p class="card-text">A cross-platform .NET MAUI app for tracking project tasks, deadlines, and team collaboration.</p>
@@ -126,7 +155,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-primary">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Healthcare Data Sync</h5>
               <p class="card-text">Custom-built data synchronization service using C#, SQL, and XML for NHS partner systems.</p>
@@ -134,7 +163,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card h-100 border-primary">
+          <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title">Financial Report Generator</h5>
               <p class="card-text">Automated financial reporting tool with SQL query optimization and Excel export features.</p>
@@ -148,7 +177,7 @@
   <!-- About -->
   <section class="section">
     <div class="container">
-      <h2 class="h3 mb-4">About</h2>
+      <h2>About</h2>
       <p class="fs-5">
         With over 7 years of experience in C#, .NET, SQL, and SSMS, Wrose Digital delivers expert consulting and high-performance software development services. Whether you're a startup or an established enterprise, we bring precision and scalability to your systems.
       </p>
@@ -158,7 +187,7 @@
   <!-- Contact -->
   <section class="section bg-white">
     <div class="container">
-      <h2 class="h3 mb-4">Contact</h2>
+      <h2>Contact</h2>
       <form name="contact" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact">
         <div class="mb-3">
@@ -179,7 +208,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-4 text-center mt-4">
+  <footer>
     &copy; 2025 Wrose Digital. All rights reserved.
   </footer>
 
