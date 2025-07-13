@@ -4,237 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wrose Digital</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #0a0a23;
-      --secondary: #6b9c8f;
-      --mint: #c4e1d2;
-      --eggshell: #f0f0e9;
-    }
     body {
-      background-color: var(--eggshell);
+      background-color: #f8f8f3;
       font-family: 'Quicksand', sans-serif;
       color: #333;
+      padding: 2rem;
     }
-    header {
-      background: linear-gradient(to right, var(--primary), var(--secondary));
-      color: white;
-      padding: 4rem 1rem 2.5rem;
+    h1, h2 {
       text-align: center;
-      border-bottom-left-radius: 2rem;
-      border-bottom-right-radius: 2rem;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.5px;
-    }
-    header p {
-      font-size: 1.25rem;
-      opacity: 0.9;
-    }
-    .section {
-      padding: 4rem 1rem;
-    }
-    .section h2 {
-      font-size: 2rem;
       margin-bottom: 2rem;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    .subheading {
       text-align: center;
+      font-size: 1.5rem;
       font-weight: 500;
+      margin-bottom: 1rem;
     }
-    .accordion-button {
-      background-color: white;
-      color: var(--primary);
-      font-weight: 500;
-      border-radius: 0.5rem !important;
+    h2 {
+      font-size: 1.8rem;
     }
-    .accordion-button:not(.collapsed) {
-      background-color: var(--secondary);
-      color: white;
+    .intro {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .section-title {
+      margin-top: 4rem;
+    }
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
     .card {
-      border: none;
-      background-color: white;
-      border-radius: 1rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card-title {
-      font-size: 1.25rem;
-      color: var(--primary);
-    }
-    footer {
-      background-color: var(--primary);
-      color: white;
-      padding: 2rem 1rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      width: 250px;
       text-align: center;
-      margin-top: 3rem;
-      border-top-left-radius: 2rem;
-      border-top-right-radius: 2rem;
     }
-    .btn-primary {
-      background-color: var(--secondary);
-      border: none;
-      border-radius: 0.5rem;
+    .card h3 {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
     }
-    .btn-primary:hover {
-      background-color: var(--primary);
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
     }
-    .form-control {
-      border-radius: 0.5rem;
-    }
-    .divider {
-      border-top: 2px solid var(--mint);
+    hr {
       margin: 4rem auto;
-      max-width: 200px;
+      max-width: 300px;
+      border-color: #c4e1d2;
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: 'Quicksand', sans-serif;
+    }
+    button {
+      background: #6b9c8f;
+      border: none;
+      padding: 0.75rem 2rem;
+      color: white;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0a0a23;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <h1>Wrose Digital</h1>
-    <p>Innovative software solutions that reduce costs, modernize systems, and drive long-term business efficiency.</p>
-  </header>
+  <h1>Wrose Digital</h1>
+  <div class="subheading">Expert Software Solutions for Your Business</div>
+  <div class="intro">
+    <p>We help businesses reduce operational costs, eliminate inefficiencies, and modernize legacy systems. Whether you need to automate reporting, improve data flow, or build robust custom software—Wrose Digital delivers tailored solutions with measurable outcomes.</p>
+  </div>
 
-  <!-- Services -->
-  <section class="section">
-    <div class="container">
-      <h2>Our Services</h2>
-      <p class="text-center mb-5">We deliver smart, cost-saving development solutions for UK enterprises, focusing on modernizing outdated tech and building reliable platforms that last.</p>
-      <div class="accordion accordion-flush" id="servicesAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              Custom .NET application development
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Modern web and desktop apps built using .NET technologies. We've helped companies cut third-party software license costs by developing tailored in-house solutions.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-              SQL database design & optimization
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Performance-tuned databases that scale. We reduced query execution time by 80% for a healthcare provider by optimizing indexes and stored procedures.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-              XML and data integration for enterprise systems
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Seamless integration with NHS datasets, finance APIs, and procurement feeds. We enabled automated XML validation workflows, saving teams hours of manual checks weekly.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-              Technical consulting and code audits
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Expert guidance for software teams. Our audits have uncovered costly performance issues, reduced technical debt, and helped align product roadmaps with clean architecture.
-            </div>
-          </div>
-        </div>
-      </div>
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <div>💻</div>
+      <h3>Custom Development</h3>
+      <p>Build tailored web or desktop applications that improve workflows, reduce software license fees, and scale with your business needs.</p>
     </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- Projects -->
-  <section class="section bg-white">
-    <div class="container">
-      <h2>Example Projects</h2>
-      <p class="text-center mb-5">Real solutions that delivered tangible business impact.</p>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Cost-Saving Project Tracker</h5>
-              <p class="card-text">We developed a .NET MAUI project tracker that replaced a costly subscription tool, saving £6,000 annually for an operations firm.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Healthcare Sync Platform</h5>
-              <p class="card-text">A robust sync engine built with SQL and XML that improved data integrity across NHS data feeds and cut downtime by 50%.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Financial Reporting Tool</h5>
-              <p class="card-text">Automated reporting system with templated exports. Reduced month-end reporting time from 2 days to 3 hours.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="card">
+      <div>↗️</div>
+      <h3>Legacy System Modernization</h3>
+      <p>Revamp aging infrastructure to boost performance, reduce risk, and bring your systems in line with modern technologies.</p>
     </div>
-  </section>
-
-  <!-- About -->
-  <section class="section">
-    <div class="container">
-      <h2>About</h2>
-      <p class="fs-5">
-        Wrose Digital has 7+ years of hands-on experience delivering enterprise-grade software with C#, .NET, and SQL Server. We’ve helped organizations eliminate inefficiencies, retire legacy tools, and future-proof their systems — all while reducing spend and enhancing operational control.
-      </p>
+    <div class="card">
+      <div>🗄️</div>
+      <h3>Database Solutions</h3>
+      <p>Optimize slow databases, improve reliability, and ensure critical data is structured and accessible to the right teams securely.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- Contact -->
-  <section class="section bg-white">
-    <div class="container">
-      <h2>Contact</h2>
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact">
-        <div class="mb-3">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Your Message</label>
-          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
+  <hr />
+
+  <h2>Example Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>E-Commerce Platform</h3>
+      <p>Designed and developed a scalable product and order management system. Reduced manual admin by 60% through automation.</p>
     </div>
-  </section>
+    <div class="card">
+      <h3>Inventory Management</h3>
+      <p>Digitized a legacy spreadsheet workflow, enabling real-time tracking and automated reporting—saving 12+ hours weekly.</p>
+    </div>
+    <div class="card">
+      <h3>Reporting System</h3>
+      <p>Created a centralized reporting suite with templated exports. Improved accuracy and cut monthly reporting prep from 2 days to 3 hours.</p>
+    </div>
+  </div>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Wrose Digital. All rights reserved.
-  </footer>
+  <h2 class="section-title">About</h2>
+  <div class="intro">
+    <p>With over 7 years working in enterprise environments, we’ve delivered mission-critical tools that solve real business pain. From finance to healthcare, our code helps reduce technical debt, automate inefficient processes, and align systems to your goals.</p>
+  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <h2 class="section-title">Contact Us</h2>
+  <form name="contact" method="POST" data-netlify="true" class="contact-form">
+    <input type="hidden" name="form-name" value="contact">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </body>
 </html>
